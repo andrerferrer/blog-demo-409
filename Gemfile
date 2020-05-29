@@ -31,6 +31,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Add simple form
 gem 'simple_form'
 
+# Add cloudinary -> Claudio Nery
+gem 'cloudinary', '~> 1.12.0'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
