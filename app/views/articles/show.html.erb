@@ -10,5 +10,25 @@
   <%= @article.body %>
 </p>
 
+<!-- <p>
+  <strong>Picture:</strong>
+  <%# cl_image_tag @article.photo.key %>
+</p> -->
+
+<p>
+  <strong>Picture:</strong>
+
+  <div class="d-flex">
+    <% @article.photos.each do |photo| %>
+      <div class="card-category" style=" width: 30%;
+      background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url(<%= cl_image_path photo.key %>)">
+      </div>
+    <% end %>
+  </div>
+
+
+</p>
+
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
